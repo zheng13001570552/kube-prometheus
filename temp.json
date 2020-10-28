@@ -1,0 +1,41 @@
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "creationTimestamp": "2020-10-28T02:12:39Z",
+    "deletionTimestamp": "2020-10-28T03:09:20Z",
+    "name": "monitoring2",
+    "resourceVersion": "1101981",
+    "selfLink": "/api/v1/namespaces/monitoring2",
+    "uid": "47585250-f5b9-4707-a5b8-774e380ada2d"
+  },
+  "spec": {
+    "finalizers": []
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2020-10-28T03:09:26Z",
+        "message": "All resources successfully discovered",
+        "reason": "ResourcesDiscovered",
+        "status": "False",
+        "type": "NamespaceDeletionDiscoveryFailure"
+      },
+      {
+        "lastTransitionTime": "2020-10-28T03:09:26Z",
+        "message": "All legacy kube types successfully parsed",
+        "reason": "ParsedGroupVersions",
+        "status": "False",
+        "type": "NamespaceDeletionGroupVersionParsingFailure"
+      },
+      {
+        "lastTransitionTime": "2020-10-28T03:10:03Z",
+        "message": "Failed to delete all resource types, 1 remaining: unexpected items still remain in namespace: monitoring2 for gvr: /v1, Resource=pods",
+        "reason": "ContentDeletionFailed",
+        "status": "True",
+        "type": "NamespaceDeletionContentFailure"
+      }
+    ],
+    "phase": "Terminating"
+  }
+}
